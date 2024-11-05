@@ -1,67 +1,59 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CustomerManagement.UI.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using CustomerManagement.UI.Models;
 
 namespace CustomerManagement.UI.Controllers
 {
     public class CustomerController : Controller
     {
-        private readonly HttpClient _httpClient;
-
-        public CustomerController(HttpClient httpClient)
+        private readonly ICustomer _customer;
+        public CustomerController(ICustomer customer)
         {
-            _httpClient = httpClient;
+            _customer = customer;
         }
 
         public async Task<IActionResult> Index()
         {
-            var customers = await _httpClient.GetFromJsonAsync<List<Customer>>("http://localhost:52952/api/customers");
-            return View(customers);
+            var customers = await _customer.GetCustomersAsync();
+            return View(customers.ToList());
         }
-
+        
         public IActionResult Create() => View();
-
+        
         [HttpPost]
         public async Task<IActionResult> Create(Customer customer)
         {
-            var response = await _httpClient.PostAsJsonAsync("http://localhost:52952/api/customers", customer);
-            if (response.IsSuccessStatusCode)
-                return RedirectToAction(nameof(Index));
-
-            return View(customer);
+            await _customer.CreateCustomerAsync(customer);
+            return RedirectToAction(nameof(Index));
+            
         }
 
         public async Task<IActionResult> Edit(int id)
         {
-            var customer = await _httpClient.GetFromJsonAsync<Customer>($"http://localhost:52952/api/customers/{id}");
+            var customer = await _customer.GetCustomerAsync(id);
             if (customer == null)
                 return NotFound();
 
             return View(customer);
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> Edit(Customer customer)
         {
-            var response = await _httpClient.PutAsJsonAsync($"http://localhost:52952/api/customers/{customer.Id}", customer);
-            if (response.IsSuccessStatusCode)
-                return RedirectToAction(nameof(Index));
-
-            return View(customer);
+            await _customer.UpdateCustomerAsync(customer);
+            return RedirectToAction(nameof(Index));
         }
-
+        
         public async Task<IActionResult> Delete(int id)
         {
-            var customer = await _httpClient.GetFromJsonAsync<Customer>($"http://localhost:52952/api/customers/{id}");
-            if (customer == null)
-                return NotFound();
-
-            return View(customer);
+            var response = await _customer.GetCustomerAsync(id);
+            return View(response);
         }
 
         [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _httpClient.DeleteAsync($"http://localhost:52952/api/customers/{id}");
+            await _customer.DeleteCustomerAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }

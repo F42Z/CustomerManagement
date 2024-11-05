@@ -1,13 +1,13 @@
-using CustomerManagement.UI.Controllers;
+using CustomerManagement.UI.Interfaces;
+using CustomerManagement.UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddControllersWithViews();
-builder.Services.AddHttpClient<CustomerController>(client =>
+builder.Services.AddHttpClient<ICustomer, CustomerService>(client =>
 {
     client.BaseAddress = new Uri("http://localhost:52952/"); 
 });
 
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

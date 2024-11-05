@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9d7KSdXMsKKbnIPaLO5ejwqOdNAkbsYuRskSUCtN7zJQXGTwcgka8FrBVhdD/8+1IFXRoSt1xPt2aIMaief+/w==",
+  "dgSpecHash": "QVM2eL31hI/8Q5gaTTKM0HagSKk3eEerV4CuyrITqvFXWvgexdz+3eI8Lz7rqMjMAiZO9+iOAvt6uxihCQNDwg==",
   "success": true,
-  "projectFilePath": "C:\\Code\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj",
+  "projectFilePath": "C:\\Code\\CustomerManagementTechTask\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1Nxo9divhbtwKjZghXp0SNalgkdxTgy21grselcePDCMatmdPuP0JgPFuf6LKwZI7SZkhaNeDf9kNsgm739W8Q==",
+  "dgSpecHash": "YD4UqzRQv9t4b+0e7UpLCUF6Z8d7eGAMcV68mY90fQIgc5vOnkVe7gi1t4YijXSosidR/bqU5dfdugpI99RREw==",
   "success": true,
-  "projectFilePath": "C:\\Code\\CustomerManagement\\CustomerManagement.API\\CustomerManagement.API.csproj",
+  "projectFilePath": "C:\\Code\\CustomerManagementTechTask\\CustomerManagement\\CustomerManagement.API\\CustomerManagement.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FaizaanNawaz\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\FaizaanNawaz\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

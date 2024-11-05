@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj": {}
+    "C:\\Code\\CustomerManagementTechTask\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj": {}
   },
   "projects": {
-    "C:\\Code\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj": {
+    "C:\\Code\\CustomerManagementTechTask\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj",
+        "projectUniqueName": "C:\\Code\\CustomerManagementTechTask\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj",
         "projectName": "CustomerManagement.UI",
-        "projectPath": "C:\\Code\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj",
+        "projectPath": "C:\\Code\\CustomerManagementTechTask\\CustomerManagement\\CustomerManagement.UI\\CustomerManagement.UI.csproj",
         "packagesPath": "C:\\Users\\FaizaanNawaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\CustomerManagement\\CustomerManagement.UI\\obj\\",
+        "outputPath": "C:\\Code\\CustomerManagementTechTask\\CustomerManagement\\CustomerManagement.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FaizaanNawaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
