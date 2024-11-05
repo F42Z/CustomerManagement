@@ -1,0 +1,16 @@
+﻿@model CustomerManagement.UI.Models.Customer
+
+<h1>Edit Customer</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+    <button type="submit">Save</button>
+</form>

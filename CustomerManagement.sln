@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagement.API", "CustomerManagement.API\CustomerManagement.API.csproj", "{DDA1C68B-A8AE-4DDB-B32D-1D9C3B8C8583}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagement.UI", "CustomerManagement.UI\CustomerManagement.UI.csproj", "{3AF03B94-2280-4FF0-A15D-B85426E58B22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDA1C68B-A8AE-4DDB-B32D-1D9C3B8C8583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA1C68B-A8AE-4DDB-B32D-1D9C3B8C8583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA1C68B-A8AE-4DDB-B32D-1D9C3B8C8583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA1C68B-A8AE-4DDB-B32D-1D9C3B8C8583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF03B94-2280-4FF0-A15D-B85426E58B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF03B94-2280-4FF0-A15D-B85426E58B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF03B94-2280-4FF0-A15D-B85426E58B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF03B94-2280-4FF0-A15D-B85426E58B22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
