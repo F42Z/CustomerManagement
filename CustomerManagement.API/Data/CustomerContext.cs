@@ -8,8 +8,7 @@ namespace CustomerManagement.API.Data
         private static int _nextId = 1;
         public List<Customer> GetCustomers() => _customers;
 
-        public Customer GetCustomer(int id) => _customers.FirstOrDefault(c => c.Id == id);
-
+        public Customer? GetCustomer(int id) => _customers.FirstOrDefault(c => c.Id == id);
         public void AddCustomer(Customer customer)
         {
             customer.Id = _nextId++;

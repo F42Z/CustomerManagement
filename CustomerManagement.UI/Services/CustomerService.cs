@@ -15,14 +15,14 @@ public class CustomerService : ICustomer
     public async Task<IEnumerable<Customer>> GetCustomersAsync()
     {
         var customers = await _httpClient.GetFromJsonAsync<List<Customer>>($"{ApiCustomers}");
-        return customers.ToList();
+        return customers?.ToList() ?? new List<Customer>();
     }
 
     public async Task<Customer> GetCustomerAsync(int id)
     {
-        return await _httpClient.GetFromJsonAsync<Customer>($"{ApiCustomers}/{id}");
+        var customer = await _httpClient.GetFromJsonAsync<Customer>($"{ApiCustomers}/{id}");
+        return customer ?? new Customer();
     }
-
     public async Task CreateCustomerAsync(Customer customer)
     {
         await _httpClient.PostAsJsonAsync(ApiCustomers, customer);

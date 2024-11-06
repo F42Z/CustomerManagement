@@ -1,5 +1,4 @@
 ﻿using CustomerManagement.UI.Models;
-using CustomerManagement.UI.Services;
 
 namespace CustomerManagement.UI.Interfaces;
 

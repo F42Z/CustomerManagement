@@ -1,6 +1,6 @@
-﻿using CustomerManagement.API.Data;
-using CustomerManagement.API.Models;
+﻿using CustomerManagement.API.Models;
 using Microsoft.AspNetCore.Mvc;
+using CustomerManagement.API.Interfaces;
 
 namespace CustomerManagement.API.Controllers
 {
@@ -8,20 +8,20 @@ namespace CustomerManagement.API.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private readonly CustomerContext _context;
+        private readonly ICustomer _customerService;
 
-        public CustomersController()
+        public CustomersController(ICustomer customerService)
         {
-            _context = new CustomerContext();
+            _customerService = customerService;
         }
 
         [HttpGet]
-        public ActionResult<List<Customer>> GetCustomers() => _context.GetCustomers();
+        public ActionResult<List<Customer>> GetCustomers() => _customerService.GetCustomers();
 
         [HttpGet("{id}")]
         public ActionResult<Customer> GetCustomer(int id)
         {
-            var customer = _context.GetCustomer(id);
+            var customer = _customerService.GetCustomer(id);
             if (customer == null)
                 return NotFound();
 
@@ -31,7 +31,7 @@ namespace CustomerManagement.API.Controllers
         [HttpPost]
         public ActionResult<Customer> AddCustomer(Customer customer)
         {
-            _context.AddCustomer(customer);
+            _customerService.AddCustomer(customer);
             return CreatedAtAction(nameof(GetCustomer), new { id = customer.Id }, customer);
         }
 
@@ -41,14 +41,14 @@ namespace CustomerManagement.API.Controllers
             if (id != customer.Id)
                 return BadRequest();
 
-            _context.UpdateCustomer(customer);
+            _customerService.UpdateCustomer(customer);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteCustomer(int id)
         {
-            _context.DeleteCustomer(id);
+            _customerService.DeleteCustomer(id);
             return NoContent();
         }
     }
